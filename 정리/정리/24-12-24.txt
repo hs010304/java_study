@@ -1,0 +1,62 @@
+*지역변수 개념설명
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+*x, y 저장소 변경
+
+int x = 10, y = 20;
+System.out.printf("x=%d, y=%d\n", x, y);
+		
+int temp = x;
+x = y;
+y = temp;
+		
+System.out.printf("x=%d, y=%d\n", x, y);
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+*개행방법
+\n, +'\n', println();
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ* 자료형의 정의
+저장할 값의 종류에 따라
+저장할 공간의 크기와 저장 형식을 정의한 것
+ 
+2. 자료형 종류
+1) 기본 자료형
+	(1) 숫자형
+		ㄱ. 정수형 - byte(1), short(2), int(4), long(8) char(2)
+		 ㄴ. 실수형 - float(4), double(8)
+	(2) 논리형 - 참,거짓 boolean(1) true, false
+ 
+2) 참조 자료형 - 배열, 클래스, 인터페이스
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+*  자료형의 불일치
+boolean gender = 0;
+// Type mismatch: cannot convert from int to boolean
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+String name = "ds";
+		int age = 20;
+		System.out.printf("[%s]\n", name);
+		System.out.printf("[%10s]\n", name);
+		System.out.printf("[%-10s]\n\n", name);
+
+		System.out.printf("[%d]\n", age);
+		System.out.printf("[%10d]\n", age);
+		System.out.printf("[%-10d]\n", age);
+		System.out.printf("[%04d]\n\n", age);
+		
+		age=10;
+		System.out.printf("[%d]\n", age);
+		System.out.printf("[%o]\n", age);
+		System.out.printf("[%x]\n", age);
+		
+		//반복
+		System.out.println("-".repeat(50));
+		
+		// 금액을 세자리마다 , 찍어서 출력
+		int money = 7635200;
+		System.out.printf("%,d\n", money);
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+* BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
